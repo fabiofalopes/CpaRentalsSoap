@@ -1,0 +1,183 @@
+<xs:schema xmlns:tns="http://default_package/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://default_package/" version="1.0">
+  <xs:element name="addReservation" type="tns:addReservation"/>
+  <xs:element name="addReservationResponse" type="tns:addReservationResponse"/>
+  <xs:element name="cancelReserva" type="tns:cancelReserva"/>
+  <xs:element name="cancelReservaResponse" type="tns:cancelReservaResponse"/>
+  <xs:element name="cancelReservation" type="tns:cancelReservation"/>
+  <xs:element name="cancelReservationResponse" type="tns:cancelReservationResponse"/>
+  <xs:element name="getAvailableSombrinhas" type="tns:getAvailableSombrinhas"/>
+  <xs:element name="getAvailableSombrinhasResponse" type="tns:getAvailableSombrinhasResponse"/>
+  <xs:element name="getDailyOcupationTable" type="tns:getDailyOcupationTable"/>
+  <xs:element name="getDailyOcupationTableResponse" type="tns:getDailyOcupationTableResponse"/>
+  <xs:element name="getReservasTable" type="tns:getReservasTable"/>
+  <xs:element name="getReservasTableResponse" type="tns:getReservasTableResponse"/>
+  <xs:element name="getReservationById" type="tns:getReservationById"/>
+  <xs:element name="getReservationByIdResponse" type="tns:getReservationByIdResponse"/>
+  <xs:element name="getReservationsByUserId" type="tns:getReservationsByUserId"/>
+  <xs:element name="getReservationsByUserIdResponse" type="tns:getReservationsByUserIdResponse"/>
+  <xs:element name="initConnection" type="tns:initConnection"/>
+  <xs:element name="initConnectionResponse" type="tns:initConnectionResponse"/>
+  <xs:element name="login" type="tns:login"/>
+  <xs:element name="loginResponse" type="tns:loginResponse"/>
+  <xs:element name="makeReservation" type="tns:makeReservation"/>
+  <xs:element name="makeReservationResponse" type="tns:makeReservationResponse"/>
+  <xs:element name="registerUser" type="tns:registerUser"/>
+  <xs:element name="registerUserResponse" type="tns:registerUserResponse"/>
+  <xs:element name="testRMI" type="tns:testRMI"/>
+  <xs:element name="testRMIResponse" type="tns:testRMIResponse"/>
+  <xs:complexType name="login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="loginResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="testRMI">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="testRMIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReservationsByUserId">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReservationsByUserIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelReserva">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelReservaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableSombrinhas">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAvailableSombrinhasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDailyOcupationTable">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDailyOcupationTableResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelReservation">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelReservationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="initConnection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="initConnectionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReservasTable">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReservasTableResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addReservation">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addReservationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReservationById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReservationByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="makeReservation">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element name="arg4" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="makeReservationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotBoundException" type="tns:NotBoundException"/>
+  <xs:complexType name="NotBoundException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MalformedURLException" type="tns:MalformedURLException"/>
+  <xs:complexType name="MalformedURLException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

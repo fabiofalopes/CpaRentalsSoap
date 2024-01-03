@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CpaRentalsSoapUtilityService" targetNamespace="http://default_package/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://default_package/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://default_package/" schemaLocation="cparentalssoaputility_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="cancelReservaResponse">
+    <wsdl:part name="parameters" element="tns:cancelReservaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="testRMI">
+    <wsdl:part name="parameters" element="tns:testRMI">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="parameters" element="tns:loginResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReservationByIdResponse">
+    <wsdl:part name="parameters" element="tns:getReservationByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDailyOcupationTableResponse">
+    <wsdl:part name="parameters" element="tns:getDailyOcupationTableResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerUser">
+    <wsdl:part name="parameters" element="tns:registerUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReservasTableResponse">
+    <wsdl:part name="parameters" element="tns:getReservasTableResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addReservation">
+    <wsdl:part name="parameters" element="tns:addReservation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReservationById">
+    <wsdl:part name="parameters" element="tns:getReservationById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="makeReservation">
+    <wsdl:part name="parameters" element="tns:makeReservation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="login">
+    <wsdl:part name="parameters" element="tns:login">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelReservationResponse">
+    <wsdl:part name="parameters" element="tns:cancelReservationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="testRMIResponse">
+    <wsdl:part name="parameters" element="tns:testRMIResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReservationsByUserIdResponse">
+    <wsdl:part name="parameters" element="tns:getReservationsByUserIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MalformedURLException">
+    <wsdl:part name="MalformedURLException" element="tns:MalformedURLException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerUserResponse">
+    <wsdl:part name="parameters" element="tns:registerUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReservationsByUserId">
+    <wsdl:part name="parameters" element="tns:getReservationsByUserId">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addReservationResponse">
+    <wsdl:part name="parameters" element="tns:addReservationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelReserva">
+    <wsdl:part name="parameters" element="tns:cancelReserva">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="makeReservationResponse">
+    <wsdl:part name="parameters" element="tns:makeReservationResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAvailableSombrinhas">
+    <wsdl:part name="parameters" element="tns:getAvailableSombrinhas">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDailyOcupationTable">
+    <wsdl:part name="parameters" element="tns:getDailyOcupationTable">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="NotBoundException">
+    <wsdl:part name="NotBoundException" element="tns:NotBoundException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelReservation">
+    <wsdl:part name="parameters" element="tns:cancelReservation">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initConnection">
+    <wsdl:part name="parameters" element="tns:initConnection">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAvailableSombrinhasResponse">
+    <wsdl:part name="parameters" element="tns:getAvailableSombrinhasResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReservasTable">
+    <wsdl:part name="parameters" element="tns:getReservasTable">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initConnectionResponse">
+    <wsdl:part name="parameters" element="tns:initConnectionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CpaRentalsSoapUtility">
+    <wsdl:operation name="login">
+      <wsdl:input name="login" message="tns:login">
+    </wsdl:input>
+      <wsdl:output name="loginResponse" message="tns:loginResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testRMI">
+      <wsdl:input name="testRMI" message="tns:testRMI">
+    </wsdl:input>
+      <wsdl:output name="testRMIResponse" message="tns:testRMIResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReservationsByUserId">
+      <wsdl:input name="getReservationsByUserId" message="tns:getReservationsByUserId">
+    </wsdl:input>
+      <wsdl:output name="getReservationsByUserIdResponse" message="tns:getReservationsByUserIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelReserva">
+      <wsdl:input name="cancelReserva" message="tns:cancelReserva">
+    </wsdl:input>
+      <wsdl:output name="cancelReservaResponse" message="tns:cancelReservaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableSombrinhas">
+      <wsdl:input name="getAvailableSombrinhas" message="tns:getAvailableSombrinhas">
+    </wsdl:input>
+      <wsdl:output name="getAvailableSombrinhasResponse" message="tns:getAvailableSombrinhasResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <wsdl:input name="registerUser" message="tns:registerUser">
+    </wsdl:input>
+      <wsdl:output name="registerUserResponse" message="tns:registerUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyOcupationTable">
+      <wsdl:input name="getDailyOcupationTable" message="tns:getDailyOcupationTable">
+    </wsdl:input>
+      <wsdl:output name="getDailyOcupationTableResponse" message="tns:getDailyOcupationTableResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelReservation">
+      <wsdl:input name="cancelReservation" message="tns:cancelReservation">
+    </wsdl:input>
+      <wsdl:output name="cancelReservationResponse" message="tns:cancelReservationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="initConnection">
+      <wsdl:input name="initConnection" message="tns:initConnection">
+    </wsdl:input>
+      <wsdl:output name="initConnectionResponse" message="tns:initConnectionResponse">
+    </wsdl:output>
+      <wsdl:fault name="MalformedURLException" message="tns:MalformedURLException">
+    </wsdl:fault>
+      <wsdl:fault name="NotBoundException" message="tns:NotBoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReservasTable">
+      <wsdl:input name="getReservasTable" message="tns:getReservasTable">
+    </wsdl:input>
+      <wsdl:output name="getReservasTableResponse" message="tns:getReservasTableResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReservation">
+      <wsdl:input name="addReservation" message="tns:addReservation">
+    </wsdl:input>
+      <wsdl:output name="addReservationResponse" message="tns:addReservationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReservationById">
+      <wsdl:input name="getReservationById" message="tns:getReservationById">
+    </wsdl:input>
+      <wsdl:output name="getReservationByIdResponse" message="tns:getReservationByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeReservation">
+      <wsdl:input name="makeReservation" message="tns:makeReservation">
+    </wsdl:input>
+      <wsdl:output name="makeReservationResponse" message="tns:makeReservationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CpaRentalsSoapUtilityServiceSoapBinding" type="tns:CpaRentalsSoapUtility">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="login">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testRMI">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="testRMI">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="testRMIResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReservationsByUserId">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getReservationsByUserId">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getReservationsByUserIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelReserva">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelReserva">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelReservaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableSombrinhas">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAvailableSombrinhas">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAvailableSombrinhasResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registerUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="registerUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="registerUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDailyOcupationTable">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDailyOcupationTable">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDailyOcupationTableResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelReservation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelReservation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelReservationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="initConnection">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="initConnection">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="initConnectionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MalformedURLException">
+        <soap:fault name="MalformedURLException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NotBoundException">
+        <soap:fault name="NotBoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getReservasTable">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getReservasTable">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getReservasTableResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReservation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addReservation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addReservationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReservationById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getReservationById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getReservationByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="makeReservation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="makeReservation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="makeReservationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CpaRentalsSoapUtilityService">
+    <wsdl:port name="CpaRentalsSoapUtilityPort" binding="tns:CpaRentalsSoapUtilityServiceSoapBinding">
+      <soap:address location="http://localhost:8080/CpaRentalsSoapUtility999/services"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
